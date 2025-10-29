@@ -20,11 +20,11 @@
      							<div class="social-media-follow">
      								<div class="social-box-inner">
      									<ul>
-     										<li><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-dribbble"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-pinterest"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-instagram"></i></a></li>
+     										<li><a ><i class="mdi mdi-facebook"></i></a></li>
+     										<li><a ><i class="mdi mdi-twitter"></i></a></li>
+     										<li><a ><i class="mdi mdi-dribbble"></i></a></li>
+     										<li><a ><i class="mdi mdi-pinterest"></i></a></li>
+     										<li><a ><i class="mdi mdi-instagram"></i></a></li>
      									</ul>
      								</div>
      								<p>follow on</p>
@@ -43,7 +43,7 @@
      										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, <br> eu condimentum. lorem ipsum dolor. lorem ipsum dolor sit amt.</p>
      									</div>
      									<div class="order-now wow bounceInUp" data-wow-duration="1.3s" data-wow-delay=".5s">
-     										<a href="#">order now</a>
+     										<a >order now</a>
      									</div>
      								</div>
      							</div>
@@ -63,11 +63,11 @@
      							<div class="social-media-follow">
      								<div class="social-box-inner">
      									<ul>
-     										<li><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-dribbble"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-pinterest"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-instagram"></i></a></li>
+     										<li><a ><i class="mdi mdi-facebook"></i></a></li>
+     										<li><a ><i class="mdi mdi-twitter"></i></a></li>
+     										<li><a ><i class="mdi mdi-dribbble"></i></a></li>
+     										<li><a ><i class="mdi mdi-pinterest"></i></a></li>
+     										<li><a ><i class="mdi mdi-instagram"></i></a></li>
      									</ul>
      								</div>
      								<p>follow on</p>
@@ -86,7 +86,7 @@
      										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, <br> eu condimentum. lorem ipsum dolor. lorem ipsum dolor sit amt.</p>
      									</div>
      									<div class="order-now wow bounceInUp" data-wow-duration="1.3s" data-wow-delay=".5s">
-     										<a href="#">order now</a>
+     										<a >order now</a>
      									</div>
      								</div>
      							</div>
@@ -106,11 +106,11 @@
      							<div class="social-media-follow">
      								<div class="social-box-inner">
      									<ul>
-     										<li><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-dribbble"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-pinterest"></i></a></li>
-     										<li><a href="#"><i class="mdi mdi-instagram"></i></a></li>
+     										<li><a ><i class="mdi mdi-facebook"></i></a></li>
+     										<li><a ><i class="mdi mdi-twitter"></i></a></li>
+     										<li><a ><i class="mdi mdi-dribbble"></i></a></li>
+     										<li><a ><i class="mdi mdi-pinterest"></i></a></li>
+     										<li><a ><i class="mdi mdi-instagram"></i></a></li>
      									</ul>
      								</div>
      								<p>follow on</p>
@@ -129,7 +129,7 @@
      										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, <br> eu condimentum. lorem ipsum dolor. lorem ipsum dolor sit amt.</p>
      									</div>
      									<div class="order-now wow bounceInUp" data-wow-duration="1.3s" data-wow-delay=".5s">
-     										<a href="#">order now</a>
+     										<a >order now</a>
      									</div>
      								</div>
      							</div>
@@ -153,7 +153,7 @@
      					<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet dolor libero, eget loved dost venenatis mauris finibus dictum. Vestibulum quis elit eget neque porttitor no amet dolor. Proin pretium purus a lorem ornare</p>
      					<p class="text2">sed lobortis pulvinar. Integer laoreet mi id eros porta euismod. Suspendisse potenti. Nulla eros dost mauris, convallis et sem tempus, viverra hendrerit sapien Lorem amet, consectetur adipiscing elit. Donec aliquet dolor libero, </p>
      					<div class="read-more">
-     						<a href="#">read more</a>
+     						<a >read more</a>
      					</div>
      				</div>
      			</div>
@@ -185,10 +185,10 @@
      										<div class="col-lg-4 col-md-6">
      											<div class="single-disesh">
      												<div class="disesh-img">
-     													<a href="#"><img src="images/dish/1.png" alt=""></a>
+     													<a ><img src="images/dish/1.png" alt=""></a>
      												</div>
      												<div class="disesh-desc pt-50">
-     													<h3><a href="">Dish Name Here</a></h3>
+     													<h3><a >Dish Name Here</a></h3>
      													<p class="price">₹100</p>
      												</div>
      											</div>
@@ -196,10 +196,10 @@
      										<div class="col-lg-4 col-md-6">
      											<div class="single-disesh">
      												<div class="disesh-img">
-     													<a href="#"><img src="images/dish/2.png" alt=""></a>
+     													<a ><img src="images/dish/2.png" alt=""></a>
      												</div>
      												<div class="disesh-desc pt-50">
-     													<h3><a href="">Dish Name Here</a></h3>
+     													<h3><a >Dish Name Here</a></h3>
      													<p class="price">₹100</p>
      												</div>
      											</div>
@@ -207,10 +207,10 @@
      										<div class="col-lg-4 d-lg-block d-md-none d-block">
      											<div class="single-disesh">
      												<div class="disesh-img">
-     													<a href="#"><img src="images/dish/3.png" alt=""></a>
+     													<a ><img src="images/dish/3.png" alt=""></a>
      												</div>
      												<div class="disesh-desc pt-50">
-     													<h3><a href="">Dish Name Here</a></h3>
+     													<h3><a >Dish Name Here</a></h3>
      													<p class="price">₹100</p>
      												</div>
      											</div>
@@ -222,10 +222,10 @@
      										<div class="col-lg-4 col-md-6">
      											<div class="single-disesh">
      												<div class="disesh-img">
-     													<a href="#"><img src="images/dish/1.png" alt=""></a>
+     													<a ><img src="images/dish/1.png" alt=""></a>
      												</div>
      												<div class="disesh-desc pt-50">
-     													<h3><a href="">Dish Name Here</a></h3>
+     													<h3><a >Dish Name Here</a></h3>
      													<p class="price">₹100</p>
      												</div>
      											</div>
@@ -233,10 +233,10 @@
      										<div class="col-lg-4 col-md-6">
      											<div class="single-disesh">
      												<div class="disesh-img">
-     													<a href="#"><img src="images/dish/2.png" alt=""></a>
+     													<a ><img src="images/dish/2.png" alt=""></a>
      												</div>
      												<div class="disesh-desc pt-50">
-     													<h3><a href="">Dish Name Here</a></h3>
+     													<h3><a >Dish Name Here</a></h3>
      													<p class="price">₹100</p>
      												</div>
      											</div>
@@ -244,10 +244,10 @@
      										<div class="col-lg-4 d-lg-block d-md-none d-block">
      											<div class="single-disesh">
      												<div class="disesh-img">
-     													<a href="#"><img src="images/dish/3.png" alt=""></a>
+     													<a ><img src="images/dish/3.png" alt=""></a>
      												</div>
      												<div class="disesh-desc pt-50">
-     													<h3><a href="">Dish Name Here</a></h3>
+     													<h3><a >Dish Name Here</a></h3>
      													<p class="price">₹100</p>
      												</div>
      											</div>
@@ -259,10 +259,10 @@
      										<div class="col-lg-4 col-md-6">
      											<div class="single-disesh">
      												<div class="disesh-img">
-     													<a href="#"><img src="images/dish/1.png" alt=""></a>
+     													<a ><img src="images/dish/1.png" alt=""></a>
      												</div>
      												<div class="disesh-desc pt-50">
-     													<h3><a href="">Dish Name Here</a></h3>
+     													<h3><a >Dish Name Here</a></h3>
      													<p class="price">₹100</p>
      												</div>
      											</div>
@@ -270,10 +270,10 @@
      										<div class="col-lg-4 col-md-6">
      											<div class="single-disesh">
      												<div class="disesh-img">
-     													<a href="#"><img src="images/dish/2.png" alt=""></a>
+     													<a ><img src="images/dish/2.png" alt=""></a>
      												</div>
      												<div class="disesh-desc pt-50">
-     													<h3><a href="">Dish Name Here</a></h3>
+     													<h3><a >Dish Name Here</a></h3>
      													<p class="price">₹100</p>
      												</div>
      											</div>
@@ -281,10 +281,10 @@
      										<div class="col-lg-4 d-lg-block d-md-none d-block">
      											<div class="single-disesh">
      												<div class="disesh-img">
-     													<a href="#"><img src="images/dish/3.png" alt=""></a>
+     													<a ><img src="images/dish/3.png" alt=""></a>
      												</div>
      												<div class="disesh-desc pt-50">
-     													<h3><a href="">Dish Name Here</a></h3>
+     													<h3><a >Dish Name Here</a></h3>
      													<p class="price">₹100</p>
      												</div>
      											</div>
@@ -340,7 +340,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -356,7 +356,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -372,7 +372,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -388,7 +388,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -408,7 +408,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -424,7 +424,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -440,7 +440,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -456,7 +456,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -480,7 +480,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -496,7 +496,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -512,7 +512,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -528,7 +528,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -548,7 +548,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -564,7 +564,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -580,7 +580,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -596,7 +596,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -621,7 +621,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -637,7 +637,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -653,7 +653,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -669,7 +669,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -689,7 +689,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -705,7 +705,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -721,7 +721,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -737,7 +737,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -761,7 +761,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -777,7 +777,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -793,7 +793,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -809,7 +809,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -829,7 +829,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -845,7 +845,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -861,7 +861,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -877,7 +877,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -901,7 +901,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -917,7 +917,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -933,7 +933,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -949,7 +949,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -969,7 +969,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -985,7 +985,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1001,7 +1001,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1017,7 +1017,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1041,7 +1041,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1057,7 +1057,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1073,7 +1073,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1089,7 +1089,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1109,7 +1109,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1125,7 +1125,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1141,7 +1141,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1157,7 +1157,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1181,7 +1181,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1197,7 +1197,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1213,7 +1213,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1229,7 +1229,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1249,7 +1249,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1265,7 +1265,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1281,7 +1281,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1297,7 +1297,7 @@
      												</div>
      												<div class="single-food-item-desc">
      													<div class="single-food-item-title">
-     														<h2><a href="#">Fried Potatoes With Garlic</a></h2>
+     														<h2><a >Fried Potatoes With Garlic</a></h2>
      														<p>Mushroom / Garlic / Veggies</p>
      													</div>
      													<div class="single-food-price">
@@ -1412,7 +1412,7 @@
      					<div class="reserv-section-inner">
      						<div class="bg-img"></div>
      						<div class="reserve-form">
-     							<h3 class="reserv-title mb-60">Reservation Form</h3>
+     							<h3 class="reserv-title mb-60">Book Your Table</h3>
      							<form action="#">
      								<div class="reserve-form-top">
      									<input type="text" placeholder="FUll name">
@@ -1464,7 +1464,7 @@
      								<p>13<span>Mar</span></p>
      							</div>
      							<div class="blog-title">
-     								<h3><a href="#">Lorem Ipsum is simply dummy</a></h3>
+     								<h3><a >Lorem Ipsum is simply dummy</a></h3>
      							</div>
      						</div>
      					</div>
@@ -1491,7 +1491,7 @@
      								<p>13<span>Mar</span></p>
      							</div>
      							<div class="blog-title">
-     								<h3><a href="#">Lorem Ipsum is simply dummy</a></h3>
+     								<h3><a >Lorem Ipsum is simply dummy</a></h3>
      							</div>
      						</div>
      					</div>

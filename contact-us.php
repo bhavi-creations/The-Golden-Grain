@@ -28,7 +28,7 @@
                      <div class="col-md-4">
                          <div class="single-contact-information">
                              <div class="contact-icon">
-                                 <a href="#"><i class="mdi mdi-phone"></i></a>
+                                 <a><i class="mdi mdi-phone"></i></a>
                              </div>
                              <p>012345678</p>
                              <p>012345678</p>
@@ -37,7 +37,7 @@
                      <div class="col-md-4">
                          <div class="single-contact-information">
                              <div class="contact-icon">
-                                 <a href="#"><i class="mdi mdi-dribbble"></i></a>
+                                 <a><i class="mdi mdi-dribbble"></i></a>
                              </div>
                              <p> email@demo.com</p>
                              <p>info@example.com</p>
@@ -46,7 +46,7 @@
                      <div class="col-md-4">
                          <div class="single-contact-information">
                              <div class="contact-icon">
-                                 <a href="#"><i class="mdi mdi-map-marker"></i></a>
+                                 <a><i class="mdi mdi-map-marker"></i></a>
                              </div>
                              <p>Address goes here,</p>
                              <p>street,Crossroad123.</p>
@@ -103,7 +103,9 @@
                      </div>
                      <div class="col-lg-6 map-div">
                          <div id="contact-map" class="map-area">
-                             <div id="googleMap" style="width:100%;height:480px;"></div>
+                             <div id="googleMap" style="width:100%;height:480px;">
+                                
+                             </div>
                          </div>
                      </div>
                  </div>

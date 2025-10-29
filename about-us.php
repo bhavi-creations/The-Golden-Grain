@@ -67,7 +67,7 @@
                     <div class="col-lg-3 col-md-4 col-6">
                         <div class="single-fun-factor">
                             <div class="fun-icon">
-                                <a href="#"><i class="mdi mdi-silverware"></i></a>
+                                <a ><i class="mdi mdi-silverware"></i></a>
                                 <h2 class="counter">300</h2>
                                 <h5>Menu Items</h5>
                             </div>
@@ -76,7 +76,7 @@
                     <div class="col-lg-3 col-md-4 col-6">
                         <div class="single-fun-factor">
                             <div class="fun-icon">
-                                <a href="#"><i class="mdi mdi-emoticon-happy"></i></a>
+                                <a ><i class="mdi mdi-emoticon-happy"></i></a>
                                 <h2 class="counter">600</h2>
                                 <h5>Visitor Everyday</h5>
                             </div>
@@ -85,7 +85,7 @@
                     <div class="col-lg-3 col-md-4 col-6">
                         <div class="single-fun-factor">
                             <div class="fun-icon">
-                                <a href="#"><i class="mdi mdi-human-male-female"></i></a>
+                                <a ><i class="mdi mdi-human-male-female"></i></a>
                                 <h2 class="counter">400</h2>
                                 <h5>Expert Chef</h5>
                             </div>
@@ -94,7 +94,7 @@
                     <div class="col-lg-3 col-md-4 col-6 d-lg-block d-md-none d-block">
                         <div class="single-fun-factor">
                             <div class="fun-icon">
-                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a ><i class="fa fa-heart"></i></a>
                                 <h2 class="counter">100</h2>
                                 <h5>Test & love</h5>
                             </div>
@@ -131,21 +131,21 @@
                    <div class="row">
                        <div class="col-md-4">
                            <div class="single-choose">
-                               <a href="#"><i class="fa fa-heart"></i></a>
+                               <a ><i class="fa fa-heart"></i></a>
                                <h5>clean environment</h5>
                                <p>Lorem  ipsoms ipsum dolor sit amet, consectetur    adipisicing elit, sed do eiusmod  incididunt ut labore  dolore lorem ipsomes.</p>
                            </div>
                        </div>
                        <div class="col-md-4">
                            <div class="single-choose">
-                               <a href="#"><i class="mdi mdi-human-male-female"></i></a>
+                               <a ><i class="mdi mdi-human-male-female"></i></a>
                                <h5>clean environment</h5>
                                <p>Lorem  ipsoms ipsum dolor sit amet, consectetur    adipisicing elit, sed do eiusmod  incididunt ut labore  dolore lorem ipsomes.</p>
                            </div>
                        </div>
                        <div class="col-md-4">
                            <div class="single-choose">
-                               <a href="#"><i class="fa fa-heart"></i></a>
+                               <a ><i class="fa fa-heart"></i></a>
                                <h5>clean environment</h5>
                                <p>Lorem  ipsoms ipsum dolor sit amet, consectetur    adipisicing elit, sed do eiusmod  incididunt ut labore  dolore lorem ipsomes.</p>
                            </div>
@@ -174,20 +174,20 @@
                                 <a href="images/about/team/team.jpg" class="member-overlay">
                                     <i class="mdi mdi-plus"></i>
                                 </a>
-                                <div class="socail-icon">
+                                <!-- <div class="socail-icon">
                                     <ul>
                                         <li><a href="#"><i class="mdi mdi-facebook"></i></a></li>
                                         <li><a href="#"><i class="mdi mdi-twitter"></i></a></li>
                                         <li><a href="#"><i class="mdi mdi-linkedin"></i></a></li>
                                         <li><a href="#"><i class="mdi mdi-google-plus"></i></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="member-content">
                                 <p>Lorem ipsum are  dolordr sit amet, conbsectetuir adipiscing elit, sed do eiusmod tempor somosha incididunt ut labore et dolore magna aliqua.</p>
                                 <div class="member-tag">
-                                    <a href="#" class="member-name">ASKAR ALI</a>
-                                    <a href="#" class="member-post">Chef cook</a>
+                                    <a  class="member-name">ASKAR ALI</a>
+                                    <a  class="member-post">Chef cook</a>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
                                 <a href="images/about/team/team-2.jpg" class="member-overlay">
                                     <i class="mdi mdi-plus"></i>
                                 </a>
-                                <div class="socail-icon">
+                                <!-- <div class="socail-icon">
                                     <ul>
                                         
                                         <li><a href="#"><i class="mdi mdi-facebook"></i></a></li>
@@ -207,13 +207,13 @@
                                         <li><a href="#"><i class="mdi mdi-linkedin"></i></a></li>
                                         <li><a href="#"><i class="mdi mdi-google-plus"></i></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="member-content">
                                 <p>Lorem ipsum are  dolordr sit amet, conbsectetuir adipiscing elit, sed do eiusmod tempor somosha incididunt ut labore et dolore magna aliqua.</p>
                                 <div class="member-tag">
-                                    <a href="#" class="member-name">CHAMAK DOE</a>
-                                    <a href="#" class="member-post">Special cook</a>
+                                    <a class="member-name">CHAMAK DOE</a>
+                                    <a  class="member-post">Special cook</a>
                                 </div>
                             </div>
                         </div>
@@ -225,20 +225,20 @@
                                 <a href="images/about/team/team-3.jpg" class="member-overlay">
                                     <i class="mdi mdi-plus"></i>
                                 </a>
-                                <div class="socail-icon">
+                                <!-- <div class="socail-icon">
                                     <ul>
                                         <li><a href="#"><i class="mdi mdi-facebook"></i></a></li>
                                         <li><a href="#"><i class="mdi mdi-twitter"></i></a></li>
                                         <li><a href="#"><i class="mdi mdi-linkedin"></i></a></li>
                                         <li><a href="#"><i class="mdi mdi-google-plus"></i></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="member-content">
                                 <p>Lorem ipsum are  dolordr sit amet, conbsectetuir adipiscing elit, sed do eiusmod tempor somosha incididunt ut labore et dolore magna aliqua.</p>
                                 <div class="member-tag">
-                                    <a href="#" class="member-name">REHANA HIRA</a>
-                                    <a href="#" class="member-post">Junior cook</a>
+                                    <a class="member-name">REHANA HIRA</a>
+                                    <a  class="member-post">Junior cook</a>
                                 </div>
                             </div>
                         </div>
