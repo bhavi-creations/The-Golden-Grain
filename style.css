@@ -304,7 +304,7 @@ img {
 }
 
 .middle-text .order-now a:hover {
-  background: #535353 none repeat scroll 0 0;
+  background: #ffbd44 none repeat scroll 0 0;
 }
 
 .middle-text .order-now {
@@ -358,7 +358,7 @@ img {
 }
 
 .welcome-about .read-more>a:hover {
-  background: #535353;
+  background: #ffbd44;
 }
 
 /*--------------------------------
@@ -1086,7 +1086,7 @@ h3.single-footer-title {
 }
 
 .offer-inner .order-now>a:hover {
-  background: #535353;
+  background: #ffbd44;
   color: #fff
 }
 
@@ -2868,12 +2868,12 @@ a.button.border_radius {
 a.button.btn-border {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: 2px solid;
-  color: #4a4a4a;
+  color: #ffbd44;
 }
 
 a.button.btn-gray:hover,
 a.button.btn-border:hover {
-  color: #451107
+  color: #ffbd44
 }
 
 /*-------------------

@@ -41,17 +41,17 @@
                                        sed lobortis pulvinar. Integer laoreet mi id eros porta euismod. Suspendisse potenti. Nullas eros mauris, convallis et sem tempus, viverra hendrerit sapien  Lorem  amet, consectetur adipiscing elit. Donec aliquet dolor libero.
                                     </p>
                                 </div>
-                                <div class="see-video">
+                                <!-- <div class="see-video">
                                     <div class="see-more-video">
                                         <h3>see our video dishes</h3>
                                     </div>
                                     <div class="viedo--play">
                                         <a href="#"><i class="mdi mdi-play"></i></a>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="about-rest-img">
-                                <img src="images/about/about.jpg" alt="">
+                                <img src="images/about/about.webp" alt="">
                             </div>
                         </div>
                     </div>

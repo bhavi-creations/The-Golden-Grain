@@ -8,7 +8,7 @@
     <meta name="description" content="Resta is a premium restaurant template and is designed for anyone in the restaurant and/or hospitality industry. Resta was designed for restaurant and bar owners, banquet halls, catering companies and professional bloggers who cater to the food niche.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link href="images/apple-touch-icon.png" type="images/x-icon" rel="shortcut icon">
+    <link href="images\logo\favicon.png" type="images/x-icon" rel="shortcut icon">
     <!-- All css files are included here. -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/core.css">
@@ -34,9 +34,10 @@
     <div class="preloader">
         <div class="loading-center">
             <div class="loading-center-absolute">
-                <div class="object object_one"></div>
+                <!-- <div class="object object_one"></div>
                 <div class="object object_two"></div>
-                <div class="object object_three"></div>
+                <div class="object object_three"></div> -->
+                <img src="./images/logo/preload.png" alt="" >
             </div>
         </div>
     </div>
