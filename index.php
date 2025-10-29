@@ -1420,7 +1420,7 @@
      									<input type="text" name="email" placeholder="Email address">
      									<input type="text" name="number" placeholder="Mobile number">
      									<label for="appointment">Choose Date & Time:</label><br>
-     									<input type="datetime-local" id="appointment" name="date" required>
+     									<input type="datetime-local" id="appointment" name="appointment_datetime" required>
 
 
      								</div>

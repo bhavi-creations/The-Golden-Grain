@@ -9,7 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $contactname = $_POST['name'] ?? '';
     $contactemail = $_POST['email'] ?? '';
     $contactnumber = $_POST['number'] ?? '';
-    $contactmessage = $_POST['Date'] ?? '';
+    $appointment_datetime = $_POST['appointment_datetime'] ?? ''; // ✅ Correct field name
+
+    // Format the date & time (optional)
+    if (!empty($appointment_datetime)) {
+        $formattedDate = date("d M Y, h:i A", strtotime($appointment_datetime));
+    } else {
+        $formattedDate = "Not selected";
+    }
 
     $mail = new PHPMailer(true);
 
@@ -18,12 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'manimalladi05@gmail.com'; // your Gmail address
-        $mail->Password   = 'gqetcnlslqnxzspm'; // your Gmail App Password (NOT normal password)
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Use implicit SSL encryption
+        $mail->Username   = 'manimalladi05@gmail.com'; // Your Gmail address
+        $mail->Password   = 'gqetcnlslqnxzspm'; // Gmail App Password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL encryption
         $mail->Port       = 465; // Port for SSL
 
-        // Optional (if SSL verification causes error)
+        // Optional: disable strict SSL verify (helps on localhost)
         $mail->SMTPOptions = [
             'ssl' => [
                 'verify_peer'       => false,
@@ -33,22 +40,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
 
         // Recipients
-        $mail->setFrom('manimalladi05@gmail.com', '');
-        $mail->addAddress('manimalladi05@gmail.com', '');
+        $mail->setFrom('manimalladi05@gmail.com', 'Ivy Dental Hospital');
+        $mail->addAddress('manimalladi05@gmail.com', 'Ivy Dental Hospital');
 
-        // Content
+        // Email content
         $mail->isHTML(true);
-        $mail->Subject = 'New Message from Contact Form';
+        $mail->Subject = 'New Appointment Booking';
         $mail->Body    = "
-            <h1>Contact Details</h1>
+            <h1>Appointment Details</h1>
             <p><strong>Name:</strong> $contactname</p>
             <p><strong>Email:</strong> $contactemail</p>
             <p><strong>Number:</strong> $contactnumber</p>
-            <p><strong>Date</strong> $contactmessage</p>
+            <p><strong>Appointment Date & Time:</strong> $formattedDate</p>
         ";
 
         $mail->send();
-        echo '<script>alert("Message has been sent successfully."); window.location.href="index.php";</script>';
+        echo '<script>alert("Appointment details sent successfully!"); window.location.href="index.php";</script>';
     } catch (Exception $e) {
         echo "Message could not be sent. Error: {$mail->ErrorInfo}";
     }
