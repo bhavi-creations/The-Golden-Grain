@@ -8,7 +8,7 @@
                     <div class="col-lg-12">
                         <div class="breadcurbs-inner text-center">
                             <h3 class="breadcrubs-title">
-                               Elements
+                               Gallery
                             </h3>
                             <ul>
                                 <li><a href="index.php">home <span>//</span>  </a></li>
@@ -30,9 +30,7 @@
                             <div class="col-lg-8 offset-lg-2">
                                 <div class="section-title grey_bg mb-50 text-center">
                                     <h2 class="mb-50">our gallery</h2>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim nostrud exercitation ullamco laboris
-                                        nisi.</p>
+                                   
                                 </div>
                             </div>
                         </div>

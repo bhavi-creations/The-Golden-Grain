@@ -8,11 +8,11 @@
                     <div class="col-lg-12">
                         <div class="breadcurbs-inner text-center">
                             <h3 class="breadcrubs-title">
-                               Elements
+                               Menu
                             </h3>
                             <ul>
                                 <li><a href="index.php">home <span>//</span>  </a></li>
-                                <li>Food</li>
+                                <li>Menu</li>
                             </ul>
                         </div>
                     </div>
