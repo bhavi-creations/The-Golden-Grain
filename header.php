@@ -68,7 +68,6 @@
                                                 <ul class="dropdown_menu">
                                                     <li><a href="rooms.php">Rooms</a></li>
                                                     <li><a href="private_theater.php">Private theater</a></li>
-                                               
                                                 </ul>
                                             </li>
 
