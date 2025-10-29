@@ -105,7 +105,7 @@
                                           
                                             <li><a href="gallery.php">gallery</a></li>
                                             <li><a href="menu.php">Menu</a></li>
-                                            <li><a href="blog.php">blog</a></li>
+                                            <li><a href="blogs.php">blog</a></li>
                                             <li><a href="contact-us.php">contact</a></li>
                                         </ul>
                                     </div>
@@ -171,7 +171,7 @@
                                    
                                     <li><a href="gallery.php">gallery</a></li>
                                     <li><a href="#">pricing</a></li>
-                                    <li><a href="blog.php">blog</a></li>
+                                    <li><a href="blogs.php">blog</a></li>
                                     <li><a href="contact-us.php">contact</a></li>
                                 </ul>
                             </nav>
