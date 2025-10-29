@@ -40,7 +40,7 @@
   right: 12px;
 } 
 .header.sticky .logo {
-  width: 100%;
+  /* width: 100%; */
 }
 .sticky .header-right .search {
   padding-top: 36px;
@@ -140,13 +140,13 @@
   font-size: 13px;
 }
 .header .logo {
-  margin-bottom: -21px;
+  /* margin-bottom: -21px; */
 } 
 .header.sticky .logo {
-  margin-bottom: -15px;
+  /* margin-bottom: -15px; */
 }
 .sticky .mean-container a.meanmenu-reveal {
-  top: -60px;
+  /* top: -60px; */
 } 
 .sticky .header-right .search {
   padding-top: 32px;
@@ -218,9 +218,9 @@
 .single-test-text {
   padding: 60px;
 }    
-.single-footer {
+/* .single-footer {
   height: 260px;
-}    
+}     */
 .single-footer-details.mt-30 {
   margin-top: 18px;
 }    
@@ -329,10 +329,10 @@
   display: none;
 }  
 .header .logo {
-  margin-bottom: -16px;
+  /* margin-bottom: -16px; */
 } 
 .header.sticky .logo {
-  margin-bottom: -15px;
+  /* margin-bottom: -15px; */
 }
 .mean-container a.meanmenu-reveal {
   left: auto !important;
@@ -743,8 +743,8 @@ h2.counter {
   font-size: 35px;
 } 
 .header .logo {
-  margin-bottom: -16px;
-  width: 120px;
+  /* margin-bottom: -16px;
+  width: 120px; */
 }
 .mean-container a.meanmenu-reveal {
   top: -62px;
