@@ -3,7 +3,7 @@
 
 <style>
     .card-container {
-        margin-top: 40px !important;
+        margin: 40px 0px !important;
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
@@ -185,5 +185,8 @@
 
         </div>
     </div>
+    <!-- <div class="read-more">
+        <a>read more</a>
+    </div> -->
 
     <?php include 'footer.php';  ?>
