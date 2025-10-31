@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Srinivasa Dental</title>
+    <title>SB Admin 2 - Register</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,7 +22,7 @@
 
 </head>
 
-<body style="background: #A9A8D4;"  >
+<body class="bg-gradient-primary">
 
     <div class="container">
 
@@ -30,15 +30,15 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                <div class="col-lg-6 d-none d-lg-block  ">
-                                <img src="img/register.jpg" alt="login image" class="img-fluid">
-                            </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-5 d-none d-lg-flex justify-content-center align-items-center bg-light">
+                        <img src="./img/preload.png" alt="Register Image" class="img-fluid" style="max-width: 80%; height: auto;">
+                    </div>
+                    <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
- 
+
 
 
 
@@ -46,36 +46,44 @@
                             <form class="user" action="../includes/register_handler.php" method="POST">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="username" name="username" required placeholder="User Name">
+                                        <input type="text" class="form-control form-control-user" id="username" name="username" required
+                                            placeholder="User Name">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName" name="last_name" required placeholder="Last Name">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="Last Name">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" name="email" required placeholder="Email Address">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Email Address">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user" id="password" name="password" required placeholder="Password">
+                                        <input type="password" class="form-control form-control-user"
+                                            placeholder="Password" id="password" name="password" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" name="repeat_password" required placeholder="Repeat Password">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="Repeat Password">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block">Register Account</button>
+                                <a href="login.php">
+                                    <button class="btn btn-primary btn-user btn-block"> Register Account </button>
+                                </a>
                                 <hr>
-                            </form>
 
-                          
+                            </form>
+                            <hr>
+
                             <div class="text-center">
                                 <a class="small" href="login.php">Already have an account? Login!</a>
-                            </div> 
+                            </div>
                             <?php
-                                            if (isset($_GET['error'])) {
-                                                echo "<p style='color:red;'>".htmlspecialchars($_GET['error'])."</p>";
-                                            }
-                                        ?>
+                            if (isset($_GET['error'])) {
+                                echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
+                            }
+                            ?>
 
                         </div>
                     </div>

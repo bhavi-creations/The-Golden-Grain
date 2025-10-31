@@ -1,29 +1,25 @@
 <?php
 session_start();
-require '../../db.connection/db.php';
+require 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = $_POST['email'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Hash the password using MD5
-    $password = md5($password);
-
-    // Fetch the user from the database using email and password
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
-    $stmt->execute([$email, $password]);
+    // Fetch the user from the database
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->execute([$username]);
     $user = $stmt->fetch();
 
-    // Check if user exists and password matches
-    if ($user) {
+    // Verify the password
+    if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
-        $_SESSION['username'] = $user['first_name'];
+        $_SESSION['username'] = $user['username'];
         header('Location: ../public/index.php');
-       exit();
+        exit();
     } else {
-        echo "error2";
-      header('Location: ../public/login.php?error=Invalid email or password');
-      exit();
+        header('Location: ../public/login.php?error=Invalid username or password');
+        exit();
     }
 }
 ?>

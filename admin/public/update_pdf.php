@@ -1,86 +1,36 @@
 <?php
-// Database connection (replace with your actual database connection details)
+// Database connection
 include '../../db.connection/db_connection.php';
-
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Function to safely get the file extension
-function getFileExtension($filename) {
-    return pathinfo($filename, PATHINFO_EXTENSION);
-}
-
-// Function to safely generate a unique filename
-function generateUniqueFilename($filename) {
-    $extension = getFileExtension($filename);
-    $basename = pathinfo($filename, PATHINFO_FILENAME);
-    $new_filename = $basename . '_' . uniqid() . '.' . $extension;
-    return $new_filename;
-}
-
 // Get form data
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $pdf_id = isset($_POST['id']) ? intval($_POST['id']) : 0;
-    $title = $_POST['title'];
+    $category_id = isset($_POST['category_id']) ? intval($_POST['category_id']) : 0;
+    $category_name = isset($_POST['category_name']) ? trim($_POST['category_name']) : '';
 
-    // Check if a new file is uploaded
-    if ($_FILES['new_pdf_file']['size'] > 0) {
-        // Handle file upload
-        $target_dir = "uploads/";
-        $new_pdf_file = $_FILES['new_pdf_file']['name'];
-        $target_file = $target_dir . generateUniqueFilename($new_pdf_file);
-        $uploadOk = 1;
-        $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    if ($category_id > 0 && $category_name != '') {
+        // Update category name in the database
+        $stmt = $conn->prepare("UPDATE category SET category_name = ? WHERE category_id = ?");
+        $stmt->bind_param("si", $category_name, $category_id);
 
-        // Check file size
-        if ($_FILES["new_pdf_file"]["size"] > 5000000) {
-            echo "Sorry, your file is too large.";
-            $uploadOk = 0;
-        }
-
-        // Allow certain file formats
-        if ($fileType != "pdf") {
-            echo "Sorry, only PDF files are allowed.";
-            $uploadOk = 0;
-        }
-
-        // Check if $uploadOk is set to 0 by an error
-        if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
-        // if everything is ok, try to upload file
-        } else {
-            if (move_uploaded_file($_FILES["new_pdf_file"]["tmp_name"], $target_file)) {
-                // Update PDF details including path
-                $stmt = $conn->prepare("UPDATE pdf_uploads SET title = ?, pdf_path = ? WHERE id = ?");
-                $stmt->bind_param("ssi", $title, $target_file, $pdf_id);
-                if ($stmt->execute()) {
-                    // Redirect to index.php after successful update
-                    header("Location: index.php");
-                    exit();
-                } else {
-                    echo "Error updating PDF details: " . $stmt->error;
-                }
-                $stmt->close();
-            } else {
-                echo "Sorry, there was an error uploading your file.";
-            }
-        }
-    } else {
-        // Update PDF details without changing the file
-        $stmt = $conn->prepare("UPDATE pdf_uploads SET title = ? WHERE id = ?");
-        $stmt->bind_param("si", $title, $pdf_id);
         if ($stmt->execute()) {
-            // Redirect to index.php after successful update
-            header("Location: index.php");
+            // Redirect to all_categories.php after successful update
+            header("Location: all_categories.php");
             exit();
         } else {
-            echo "Error updating PDF details: " . $stmt->error;
+            echo "Error updating category: " . $stmt->error;
         }
+
         $stmt->close();
+    } else {
+        echo "Invalid Category ID or empty category name.";
     }
+} else {
+    echo "Invalid request method.";
 }
 
 $conn->close();

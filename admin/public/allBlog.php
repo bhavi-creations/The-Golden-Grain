@@ -9,11 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Srinivasa Dental - Dashboard</title>
+    <title>Tripura-Mind-Care - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -64,38 +66,52 @@
                         <div class="container">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h2 class="h2 mb-0 text-info mx-2"> Published Blogs</h2>
-                                <a href="newBlog.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Create Blog</a>
+                                <a href="newBlog.php"
+                                    class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                        class="fas fa-download fa-sm text-white-50"></i> Create Blog</a>
 
                             </div>
+
                             <div class='row row-custom no-gutters'>
+
                                 <?php
                                 // Database connection (replace with your actual database connection details)
-                                include '../../db.connection/db_connection.php';
+                                $servername = "localhost";
+                                $username = "root";
+                                $password = "";
+                                $dbname = "tripura";
 
-                                // Fetch blog data ordered by created_at in descending order
-                                $sql = "SELECT id, title, main_content, main_image FROM blogs ORDER BY created_at DESC";
+                                // Create connection
+                                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                                // Check connection
+                                if ($conn->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                }
+
+                                // Fetch blog data
+                                $sql = "SELECT id, title, content, video FROM blog";
                                 $result = $conn->query($sql);
 
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
-                                        // Determine image to display (use main_image if exists)
-                                        $image_path = !empty($row['main_image']) ? "../uploads/photos/{$row['main_image']}" : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
-
+                                        // $photos = json_decode($row['photos'], true);
+                                        // $first_photo = isset($photos[0]) ? $photos[0] : "https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png";
                                         echo "
-            <div class='col-12 col-md-4 col-custom'>
-                <div class='card card-custom'>
-                    <img src='{$image_path}' class='card-img-top' alt='Blog Image'>
-                    <div class='card-body'>
-                        <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
-                        <p class='card-text'>" . substr(strip_tags($row['main_content']), 0, 100) . "...</p>
-                        <div class='row'>
-                            <a href='editBlog.php?id={$row['id']}' class='btn btn-warning col-xl-4 mx-3 my-2'>Edit Blog</a>
-                            <a href='deleteBlog.php?id={$row['id']}' class='col-xl-4 btn btn-danger mx-3 my-2'>Delete</a>
-                        </div>
-                    </div>
-                </div>
+                                            <div class='col-12 col-md-4 col-custom'>
+            <div class='card card-custom'>
+            <div class='card-body'>
+            <h5 class='card-title' style='color:black;'>{$row['title']}</h5>
+            <p class='card-text'>" . substr(strip_tags($row['content']), 0, 100) . "...</p>
+            <div class='row'>
+            <a href='editBlog.php?id={$row['id']}' class='btn btn-warning col-xl-4 mx-3 my-2'>Edit Blog</a>
+            <a href='deleteBlog.php?id={$row['id']}' class='col-xl-4 btn btn-danger mx-3 my-2'>Delete</a>
             </div>
-            ";
+                </div>
+                </div>
+                </div>
+
+        ";
                                     }
                                 } else {
                                     echo "<p>No blog posts found.</p>";
@@ -104,16 +120,6 @@
                                 $conn->close();
                                 ?>
                             </div>
-
-
-
-
-
-
-
-
-
-
                         </div>
 
                         <!-- <div class="col-12 col-md-4 col-custom">
@@ -182,11 +188,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <div class="footer-widget__copyright">
-                            <p class="mini_text" style="color:black"> ©2024 Srinivasa Dental . All Rights Reserved. Designed &
-                                Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi
-                                    Creations</a></p>
-                        </div>
+                        <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
             </footer>
@@ -204,7 +206,8 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -217,7 +220,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.php">Logout</a>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
                 </div>
             </div>
         </div>

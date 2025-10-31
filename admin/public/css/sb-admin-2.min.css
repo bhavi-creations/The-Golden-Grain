@@ -2693,14 +2693,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #4e73df;
-    border-color: #4e73df
+    background-color: #451107;
+    border-color: #451107 ;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #2e59d9;
-    border-color: #2653d4
+    background-color: #d59f3d;
+    border-color: #d59f3d
 }
 
 .btn-primary.focus,
@@ -11099,8 +11099,8 @@ a:focus {
 }
 
 .bg-gradient-primary {
-    background-color: #4e73df;
-    background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+    background-color: #451107;
+    background-image: linear-gradient(180deg, #451107 10%, #451107 100%);
     background-size: cover
 }
 

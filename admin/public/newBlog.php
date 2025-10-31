@@ -2,31 +2,35 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Srinivasa dental hospital - Dashboard</title>
+    <title>Tripura-Mind-Care - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
-
-
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <?php include 'sidebar.php'; ?>
+        <?php
+        include 'sidebar.php';
+        ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -36,7 +40,9 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <?php include 'navbar.php'; ?>
+                <?php
+                include 'navbar.php';
+                ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -45,170 +51,95 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">CREATE BLOG</h1>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
-                        <div class="col-xl-11">
+                        <div class="col-xl-11 ">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-success">CREATE CONTENT</h6>
+                                    <!-- <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div> -->
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <form style="color:black;" id="addblogform" action="addBlog.php" method="POST" enctype="multipart/form-data">
-
-                                        <!-- Blog Title -->
+                                    <form style='color:black;' id="addblogform" action="addBlog.php" method="POST"
+                                        enctype="multipart/form-data">
                                         <div class="mb-3">
-                                            <label class="form-label text-primary">ENTER TITLE</label>
-                                            <input type="text" class="form-control text-grey-900" name="title" placeholder="Title" required>
+                                            <label for="exampleFormControlInput1" class="form-label text-primary">ENTER
+                                                TITLE</label>
+                                            <input type="text" class="form-control text-grey-900" name='title'
+                                                id="exampleFormControlInput1" placeholder="TITLE" required>
                                         </div>
+                                        <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
+                                            rel="stylesheet" />
 
-                                        <!-- Select Service -->
-                                        <div class="filter-section mb-3">
-                                            <!-- <label class="form-label text-primary">Select Service:</label> -->
-                                            <div class="filter-section mb-3">
-                                                <label for="service" class="form-label text-primary">Select Service:</label>
-                                                <select id="service" name="service" class="form-control" required>
-                                                    <option value="">Select a Service</option>
-                                                    <option value="Root Canal">Root Canal</option>
-                                                    <option value="Dental Braces">Dental Braces</option>
-                                                    <option value="Clear Aligners">Clear Aligners</option>
-                                                    <option value="Dental Implants">Dental Implants</option>
-                                                    <option value="Crown Bridge">Crown & Bridge</option>
-                                                    <option value="Teeth Filling">Teeth Filling</option>
-                                                    <option value="Dentures">Dentures</option>
-                                                    <option value="Teeth Scaling">Teeth Scaling</option>
-                                                    <option value="Tooth Extraction">Tooth Extraction</option>
-                                                    <option value="Teeth Cleaning">Teeth Cleaning</option>
-                                                    <option value="Teeth Whitening">Teeth Whitening</option>
-                                                    <option value="Smile Makeover">Smile Makeover</option>
-                                                    <option value="Full Mouth Restoration">Full Mouth Restoration</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                        <!-- Create the editor container -->
+                                        <label for="exampleFormControlInput1" class="form-label text-primary">ENTER
+                                            CONTENT</label>
+                                        <div id="editor" style='height:200px;'></div>
 
-                                        <!-- Main Content -->
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary">ENTER MAIN CONTENT</label>
-                                            <div id="mainEditor" style="height: 200px;"></div>
-                                            <input type="hidden" name="main_content" id="mainContentData">
-                                        </div>
+                                        <input name="content" id="formcontentdata" style="display: none"></input>
 
-                                        <!-- Main Image -->
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary my-2">Choose Main Image</label>
-                                            <input class="form-control" name="main_image" type="file">
-                                        </div>
+                                        <!-- Include the Quill library -->
+                                        <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
-                                        <!-- Video -->
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary">Choose Video</label>
-                                            <input class="form-control" name="video" type="file">
-                                        </div>
-
-                                        <!-- Full Content Quill Editor -->
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary">ENTER FULL CONTENT</label>
-                                            <div id="fullEditor" style="height: 400px;"></div>
-                                            <input type="hidden" name="full_content" id="fullContentData">
-                                        </div>
-
-                                        <!-- Repeatable Sections: Section 1,2,3 -->
-                                        <!-- <?php for ($i = 1; $i <= 3; $i++): ?>
-                                            <div class="mb-3">
-                                                <label class="form-label text-primary">Section <?php echo $i; ?> Content</label>
-                                                <div id="editor<?php echo $i; ?>" style="height: 200px;"></div>
-                                                <input type="hidden" name="section<?php echo $i; ?>_content" id="sectionContent<?php echo $i; ?>">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label text-primary">Section <?php echo $i; ?> Image (optional)</label>
-                                                <input class="form-control" name="section<?php echo $i; ?>_image" type="file">
-                                            </div>
-                                        <?php endfor; ?> -->
-
-                                        <!-- Section 1 -->
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary">Section 1 Content</label>
-                                            <div id="editor1" style="height: 200px;"></div>
-                                            <input type="hidden" name="section1_content" id="sectionContent1">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary">Section 1 Image (optional)</label>
-                                            <input class="form-control" name="section1_image" type="file">
-                                        </div>
-
-                                        <!-- Section 2 -->
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary">Section 2 Content</label>
-                                            <div id="editor2" style="height: 200px;"></div>
-                                            <input type="hidden" name="section2_content" id="sectionContent2">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary">Section 2 Image (optional)</label>
-                                            <input class="form-control" name="section2_image" type="file">
-                                        </div>
-
-                                        <!-- Section 3 -->
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary">Section 3 Content</label>
-                                            <div id="editor3" style="height: 200px;"></div>
-                                            <input type="hidden" name="section3_content" id="sectionContent3">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label text-primary">Section 3 Image (optional)</label>
-                                            <input class="form-control" name="section3_image" type="file">
-                                        </div>
-
-
-                                        <button type="reset" class="btn btn-danger">Clear</button>
-                                        <button type="submit" class="btn btn-success">Publish</button>
-                                    </form>
-
-                                    <!-- Include Quill -->
-                                    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
-                                    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
-
-                                    <script>
-                                        // Initialize Quill editors
-                                        const quillMain = new Quill('#mainEditor', {
-                                            theme: 'snow',
-                                            placeholder: 'Enter main content...'
-                                        });
-                                        const quillFull = new Quill('#fullEditor', {
-                                            theme: 'snow',
-                                            placeholder: 'Enter full content...'
-                                        });
-
-                                        const sections = [];
-                                        for (let i = 1; i <= 3; i++) {
-                                            sections[i] = new Quill('#editor' + i, {
-                                                theme: 'snow',
-                                                placeholder: 'Enter content for section ' + i
+                                        <!-- Initialize Quill editor -->
+                                        <script>
+                                            const quill = new Quill('#editor', {
+                                                modules: {
+                                                    toolbar: [
+                                                        [{ header: [1, 2, false] }],
+                                                        ['bold', 'italic', 'underline'],
+                                                        ['image', 'code-block'],
+                                                    ],
+                                                },
+                                                placeholder: 'Compose an epic...',
+                                                theme: 'snow', // or 'bubble'
                                             });
-                                        }
+                                            document.querySelector('#addblogform').onsubmit = function () {
+                                                document.querySelector('#formcontentdata').value = quill.getSemanticHTML();
+                                            };
+                                        </script>
 
-                                        // On submit, copy HTML to hidden inputs
-                                        document.querySelector('#addblogform').onsubmit = function() {
-                                            document.querySelector('#mainContentData').value = quillMain.root.innerHTML;
-                                            document.querySelector('#fullContentData').value = quillFull.root.innerHTML;
-
-                                            for (let i = 1; i <= 3; i++) {
-                                                document.querySelector('#sectionContent' + i).value = sections[i].root.innerHTML;
-                                            }
-                                        }
-                                    </script>
-
-
-
-
+                                        <div class="mb-3">
+                                            <label for="formFileVideo" class="form-label text-primary">Choose
+                                                Video</label>
+                                            <input class="form-control" name="video" type="file" id="formFileVideo"
+                                                required>
+                                        </div>
+                                        <div class='row p-3'>
+                                            <div class='col-xl-7 col-sm-2'></div>
+                                            <button type='reset'
+                                                class='btn btn-danger mx-1 my-2 col-xl-2'>Clear</button>
+                                            <button type='submit'
+                                                class='btn btn-success mx-1 my-2 col-xl-2'>Publish</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                     <!-- /.container-fluid -->
+
                 </div>
                 <!-- End of Main Content -->
 
@@ -216,16 +147,13 @@
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <div class="footer-widget__copyright">
-                                <p class="mini_text" style="color:black"> ©2024 SrinivasaDentalhospital . All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi Creations</a></p>
-                            </div>
+                            <span>Copyright &copy; Your Website 2021</span>
                         </div>
                     </div>
                 </footer>
                 <!-- End of Footer -->
 
             </div>
-
             <!-- End of Content Wrapper -->
 
         </div>
@@ -236,6 +164,26 @@
             <i class="fas fa-angle-up"></i>
         </a>
 
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -245,6 +193,13 @@
 
         <!-- Custom scripts for all pages-->
         <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 

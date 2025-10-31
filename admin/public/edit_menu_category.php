@@ -1,41 +1,42 @@
 <?php
 // Database connection
-// include '../../db.connection/db_connection.php';
 include '../../db_connect/db_connect.php';
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $category_id = isset($_POST['category_id']) ? intval($_POST['category_id']) : 0;
-    $category_name = isset($_POST['category_name']) ? trim($_POST['category_name']) : '';
+    $menu_category_id = isset($_POST['menu_category_id']) ? intval($_POST['menu_category_id']) : 0;
+    $menu_category = isset($_POST['menu_category']) ? trim($_POST['menu_category']) : '';
 
-    if ($category_id > 0 && $category_name != '') {
-        $stmt = $conn->prepare("UPDATE category SET category_name = ? WHERE category_id = ?");
-        $stmt->bind_param("si", $category_name, $category_id);
+    if ($menu_category_id > 0 && $menu_category != '') {
+        $stmt = $conn->prepare("UPDATE menu_category SET menu_category = ? WHERE menu_category_id = ?");
+        $stmt->bind_param("si", $menu_category, $menu_category_id);
+
         if ($stmt->execute()) {
-            // Redirect to all_categories.php after successful update
-            header("Location: allPDF.php");
+            // Redirect to all menu categories page after successful update
+            header("Location: all_menu_categories.php");
             exit();
         } else {
-            $error_msg = "Error updating category: " . $stmt->error;
+            $error_msg = "Error updating menu category: " . $stmt->error;
         }
+
         $stmt->close();
     } else {
-        $error_msg = "Invalid Category ID or empty category name.";
+        $error_msg = "Invalid Menu Category ID or empty category name.";
     }
 }
 
-// Get Category ID from URL (for initial form population)
-$category_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+// Get Menu Category ID from URL (for initial form population)
+$menu_category_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
-if ($category_id > 0) {
-    $stmt = $conn->prepare("SELECT category_name FROM category WHERE category_id = ?");
-    $stmt->bind_param("i", $category_id);
+if ($menu_category_id > 0) {
+    $stmt = $conn->prepare("SELECT menu_category FROM menu_category WHERE menu_category_id = ?");
+    $stmt->bind_param("i", $menu_category_id);
     $stmt->execute();
-    $stmt->bind_result($category_name);
+    $stmt->bind_result($menu_category);
     $stmt->fetch();
     $stmt->close();
 } else {
-    echo "Invalid Category ID.";
+    echo "Invalid Menu Category ID.";
     exit;
 }
 
@@ -47,7 +48,7 @@ $conn->close();
 
 <head>
     <meta charset="utf-8">
-    <title>Edit Category - The Golden Grain</title>
+    <title>Edit Menu Category</title>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 </head>
@@ -64,18 +65,14 @@ $conn->close();
             <!-- Main Content -->
             <div id="content" class="flex-fill d-flex flex-column">
 
-                <!-- Topbar -->
-               
-                <!-- End Topbar -->
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid py-4 flex-fill d-flex flex-column">
 
                     <!-- Page Header -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4 flex-wrap">
-                        <h1 class="h3 mb-0 text-gray-800">Edit Category</h1>
-                        <a href="newPDF.php" class="btn btn-primary btn-sm shadow-sm my-2">
-                            <i class="fas fa-arrow-left fa-sm text-white-50"></i> Back to Categories
+                        <h1 class="h3 mb-0 text-gray-800">Edit Menu Category</h1>
+                        <a href="all_menu_categories.php" class="btn btn-primary btn-sm shadow-sm my-2">
+                            <i class="fas fa-arrow-left fa-sm text-white-50"></i> Back to Menu Categories
                         </a>
                     </div>
 
@@ -84,7 +81,7 @@ $conn->close();
                         <div class="col-12 col-md-8 col-lg-6 d-flex flex-column">
                             <div class="card shadow-sm flex-fill">
                                 <div class="card-header py-3 bg-success text-white">
-                                    <h6 class="m-0 font-weight-bold">Edit Category Details</h6>
+                                    <h6 class="m-0 font-weight-bold">Edit Menu Category Details</h6>
                                 </div>
                                 <div class="card-body flex-fill d-flex flex-column">
                                     <?php if (isset($error_msg)) { ?>
@@ -92,11 +89,11 @@ $conn->close();
                                     <?php } ?>
                                     <form action="" method="POST" class="flex-fill d-flex flex-column justify-content-between">
                                         <div class="mb-3">
-                                            <label for="categoryName" class="form-label text-dark font-weight-bold">Category Name</label>
-                                            <input type="text" class="form-control" id="categoryName" name="category_name" value="<?= htmlspecialchars($category_name); ?>" required>
+                                            <label for="menuCategoryName" class="form-label text-dark font-weight-bold">Menu Category Name</label>
+                                            <input type="text" class="form-control" id="menuCategoryName" name="menu_category" value="<?= htmlspecialchars($menu_category); ?>" required>
                                         </div>
 
-                                        <input type="hidden" name="category_id" value="<?= $category_id; ?>">
+                                        <input type="hidden" name="menu_category_id" value="<?= $menu_category_id; ?>">
 
                                         <div class="d-flex justify-content-end flex-wrap mt-3">
                                             <button type="reset" class="btn btn-danger mx-1 my-1">Clear</button>
@@ -116,7 +113,7 @@ $conn->close();
                 <footer class="bg-white text-center py-3 mt-auto">
                     <div class="container">
                         <p class="mb-0" style="color:black">
-                            ©2025 Srinivasa Multispecialty Dental Hospital. All Rights Reserved. Developed by
+                            ©2025 Menu Management. Developed by
                             <a href="https://bhavicreations.com/" target="_blank" style="color:black;text-decoration:none;">Bhavi Creations</a>
                         </p>
                     </div>
@@ -143,6 +140,5 @@ $conn->close();
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>
 </body>
-
 
 </html>

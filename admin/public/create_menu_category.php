@@ -1,10 +1,8 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
-}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,12 +30,7 @@ if (!isset($_SESSION['username'])) {
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="flex-fill d-flex flex-column">
-            <!-- Main Content -->
             <div id="content" class="flex-fill d-flex flex-column">
-                <!-- Topbar -->
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
                 <div class="container-fluid py-4 flex-fill d-flex flex-column">
 
                     <!-- Success/Error Messages -->
@@ -53,7 +46,7 @@ if (!isset($_SESSION['username'])) {
 
                     <!-- Page Heading -->
                     <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap">
-                        <h1 class="h3 mb-0 text-gray-800">Create Category</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Create Menu Category</h1>
                     </div>
 
                     <!-- Create Category Form -->
@@ -64,10 +57,10 @@ if (!isset($_SESSION['username'])) {
                                     <h6 class="m-0 font-weight-bold">Add New Category</h6>
                                 </div>
                                 <div class="card-body flex-fill d-flex flex-column justify-content-between">
-                                    <form method="POST" action="create_category_process.php" class="flex-fill d-flex flex-column justify-content-between">
+                                    <form method="POST" action="update_menu.php" class="flex-fill d-flex flex-column justify-content-between">
                                         <div class="form-group">
                                             <label for="categoryName" class="text-dark font-weight-bold">Category Name</label>
-                                            <input type="text" class="form-control" name="category_name" id="categoryName"
+                                            <input type="text" class="form-control" name="menu_category" id="categoryName"
                                                 placeholder="Enter category name" required>
                                         </div>
                                         <div class="mt-3 d-flex justify-content-end">
@@ -81,7 +74,6 @@ if (!isset($_SESSION['username'])) {
 
                     <div class="mt-auto"></div>
                 </div>
-                <!-- End of Page Content -->
 
                 <!-- Footer -->
                 <footer class="bg-white text-center py-3 mt-auto">
@@ -94,45 +86,7 @@ if (!isset($_SESSION['username'])) {
                 </footer>
                 <!-- End Footer -->
             </div>
-            <!-- End of Main Content -->
-        </div>
-        <!-- End of Content Wrapper -->
-    </div>
-    <!-- End of Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.php">Logout</a>
-                </div>
-            </div>
         </div>
     </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
 </body>
-
-
 </html>

@@ -148,10 +148,10 @@
      		<div class="row">
      			<div class="col-md-6">
      				<div class="welcome-about">
-     					<h2 class="title_1">About Fida Restaurant </h2>
-     					<h3 class="title_2">Vestibulum quis elit eget neque porttitor no amet dolor. Proin pretiumss. </h3>
-     					<p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet dolor libero, eget loved dost venenatis mauris finibus dictum. Vestibulum quis elit eget neque porttitor no amet dolor. Proin pretium purus a lorem ornare</p>
-     					<p class="text2">sed lobortis pulvinar. Integer laoreet mi id eros porta euismod. Suspendisse potenti. Nulla eros dost mauris, convallis et sem tempus, viverra hendrerit sapien Lorem amet, consectetur adipiscing elit. Donec aliquet dolor libero, </p>
+     					<h2 class="title_1">About The Golden Grain Restaurant </h2>
+     					<h3 class="title_2">Welcome to The Golden Grain Restaurant, where flavor meets comfort and every meal is crafted with passion. We offer a cozy and inviting atmosphere perfect for friends, families, and solo diners </h3>
+     					<p class="text1">Our menu features freshly prepared dishes using the finest ingredients, from hearty breakfasts and gourmet lunches to indulgent desserts and specialty beverages. Each dish is designed to delight your taste buds and provide a memorable dining experience.</p>
+     					<p class="text2">At The Golden Grain Restaurant, we believe in more than just food – we create moments. Enjoy friendly service, a warm ambiance, and culinary delights that keep you coming back for more.</p>
      					<div class="read-more">
      						<a>read more</a>
      					</div>
@@ -1445,7 +1445,7 @@
      			<div class="col-lg-8 offset-lg-2">
      				<div class="section-title grey_bg mb-50 text-center">
      					<h2 class="mb-50">Our blog</h2>
-     					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim nostrud exercitation ullamco laboris nisi.</p>
+     					<p> Explore our blog for the latest updates, delicious recipes, and insider tips from the world of food and dining. Stay inspired and discover new flavors with every read.</p>
      				</div>
      			</div>
      		</div>
@@ -1537,30 +1537,30 @@
      									<p class="text-qoute">
      										<i class="fa fa-quote-left" aria-hidden="true"></i>
      									</p>
-     									<p class="test-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
+     									<p class="test-text">“Dinner here was delightful — the ambience is warm, the service attentive, and the signature dish simply unforgettable. Already planning my next visit!” </p>
      									<div class="test-title mb-50">
-     										<h4>Alexandra</h4>
-     										<p>Manager</p>
+     										<h4>gowri</h4>
+     										<!-- <p>Manager</p> -->
      									</div>
      								</div>
      								<div class="single-test-text">
      									<p class="text-qoute">
      										<i class="fa fa-quote-left" aria-hidden="true"></i>
      									</p>
-     									<p class="test-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+     									<p class="test-text">“A cozy spot with friendly staff and thoughtfully prepared meals. The coffee was excellent, and the dessert really capped the experience beautifully.”</p>
      									<div class="test-title mb-50">
-     										<h4>Alison</h4>
-     										<p>Web Developer</p>
+     										<h4>ambika</h4>
+     										<!-- <p>Web Developer</p> -->
      									</div>
      								</div>
      								<div class="single-test-text">
      									<p class="text-qoute">
      										<i class="fa fa-quote-left" aria-hidden="true"></i>
      									</p>
-     									<p class="test-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
+     									<p class="test-text">“Good food, nice decor — but the wait time was a bit long and one of our dishes arrived lukewarm. Overall a solid experience but some room for improvement.” </p>
      									<div class="test-title mb-50">
-     										<h4>Carolyn</h4>
-     										<p>Wordpress Developer</p>
+     										<h4>puja</h4>
+     										<!-- <p>Wordpress Developer</p> -->
      									</div>
      								</div>
      							</div>
@@ -1587,8 +1587,7 @@
      						<h2 class="ttle2">
      							our Vegetable Soap
      						</h2>
-     						<p> Lorem ipsum Newaz dolor sit amet, consectetur adipiscing elit. Donec aliquet dolor libero, eget loved dost venenatis maurisfinibus dictumss. Vestibulum quis elit eget neque porttitor no amet dolor. Proin pretium purus a lorem
-     							obortis pulvinar. Integer laoreet mi id eros porta euismod. Suspendisse potenti. Nulla eros </p>
+     						<p> Experience the gentle touch of nature with our Vegetable Soap. Made from 100% natural vegetable ingredients, it nourishes your skin while keeping it soft, smooth, and healthy. Free from harsh chemicals, it’s perfect for daily use for all skin types </p>
      						<div class="order-now">
      							<a href="javascript:void(0)">order now</a>
      						</div>

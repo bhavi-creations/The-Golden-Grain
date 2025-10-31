@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 
 <head>
     <meta charset="utf-8">
-    <title>Srinivasa Dental - Comments</title>
+    <title>The Golden Grain - Comments</title>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700,800" rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -103,7 +103,7 @@ $result = $conn->query($sql);
 
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto text-center">
-                    <p style="color:black">©2024 Srinivasa Dental. Designed & Developed by 
+                    <p style="color:black">©2025 The Golden Grain. Designed & Developed by 
                         <a href="https://bhavicreations.com/" target="_blank" style="color:black;text-decoration:none;">Bhavi Creations</a>
                     </p>
                 </div>

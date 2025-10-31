@@ -1,13 +1,24 @@
 <?php
 // Database connection (replace with your actual database connection details)
-include '../../db.connection/db_connection.php';
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Tripura";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 // Check if the id is set in the URL
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
     
     // Prepare and bind the delete statement
-    $stmt = $conn->prepare("DELETE FROM blogs WHERE id = ?");
+    $stmt = $conn->prepare("DELETE FROM blog WHERE id = ?");
     $stmt->bind_param("i", $id);
     
     // Execute the statement

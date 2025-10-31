@@ -1,15 +1,25 @@
 <?php include 'header.php'; ?>
 
+<div class="breadcrubs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcurbs-inner text-center">
+                    <h3 class="breadcrubs-title">
+                        Rooms
+                    </h3>
+                    <ul>
+                        <li><a href="index.php">home <span>//</span> </a></li>
+                        <li>Rooms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <style>
-    .card-container {
-        margin: 40px 0px !important;
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .room_section {
         margin-top: 40px !important;
     }
@@ -63,6 +73,8 @@
 
     .card-content h3 {
         margin: 0 0 10px 0;
+        font-weight: 900 !important; 
+      
     }
 
     .features {
@@ -75,6 +87,7 @@
 
     .features i {
         margin-right: 5px;
+        font-weight: 900 !important;
     }
 
     .reviews {
@@ -107,83 +120,252 @@
 
 
 
-    <div class="about-title text-center  room_section">
+    <div class="about-title text-center  room_section py-5">
         <h2> Luxury Rooms</h2>
     </div>
-    <div class="card-container">
+    <div class="card-container container">
 
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 py-2">
 
-
-        <div class="card">
-            <img src="images/rooms/1.jpg" alt="Luxury Suite">
-            <div class="price-tag">From $90 / night</div>
-            <div class="card-content">
-                <h3>Luxury Suite</h3>
-                <div class="features">
-                    <div><i class="fa fa-bed"></i>1 King Bed</div>
-                    <div><i class="fa fa-users"></i>4 Guests</div>
-                </div>
-                <div class="reviews">
-                    <div class="stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                <div class="card">
+                    <img src="images/rooms/1.jpg" alt="Luxury Suite">
+                    <div class="price-tag">From $90 / night</div>
+                    <div class="card-content">
+                        <h3>Luxury Suite</h3>
+                        <div class="features">
+                            <div><i class="fa fa-bed"></i>1 King Bed</div>
+                            <div><i class="fa fa-users"></i>4 Guests</div>
+                        </div>
+                        <div class="reviews">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>1 Review</span>
+                        </div>
+                        <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
                     </div>
-                    <span>1 Review</span>
                 </div>
-                <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
             </div>
-        </div>
-
-        <div class="card">
-            <img src="images/rooms/2.jpg" alt="Standard Deluxe">
-            <div class="price-tag">From $75 / night</div>
-            <div class="card-content">
-                <h3>Standard Deluxe</h3>
-                <div class="features">
-                    <div><i class="fa fa-bed"></i>2 Single Beds</div>
-                    <div><i class="fa fa-users"></i>6 Guests</div>
-                </div>
-                <div class="reviews">
-                    <div class="stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-alt"></i>
+            <div class="col-12 col-md-6 col-lg-4 py-2">
+                <div class="card">
+                    <img src="images/rooms/2.jpg" alt="Standard Deluxe" class="img-fluid text-center">
+                    <div class="price-tag">From $75 / night</div>
+                    <div class="card-content">
+                        <h3>Standard Deluxe</h3>
+                        <div class="features">
+                            <div><i class="fa fa-bed"></i>2 Single Beds</div>
+                            <div><i class="fa fa-users"></i>6 Guests</div>
+                        </div>
+                        <div class="reviews">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-alt"></i>
+                            </div>
+                            <span>2 Reviews</span>
+                        </div>
+                        <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
                     </div>
-                    <span>2 Reviews</span>
-                </div>
-                <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="images/rooms/3.jpg" alt="The Penthouse">
-            <div class="price-tag">From <del>$250</del> $200 / night</div>
-            <div class="discount-tag">20% OFF</div>
-            <div class="card-content">
-                <h3>The Penthouse</h3>
-                <div class="features">
-                    <div><i class="fa fa-bed"></i>2 King Beds</div>
-                    <div><i class="fa fa-users"></i>6 Guests</div>
-                </div>
-                <div class="reviews">
-                    <div class="stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-alt"></i>
-                    </div>
-                    <span>2 Reviews</span>
-                    <!-- <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a> -->
                 </div>
             </div>
 
+
+
+            <div class="col-12 col-md-6 col-lg-4 py-2">
+                <div class="card">
+                    <img src="images/rooms/2.jpg" alt="Standard Deluxe" class="img-fluid text-center">
+                    <div class="price-tag">From $75 / night</div>
+                    <div class="card-content">
+                        <h3>The Penthouse</h3>
+                        <div class="features">
+                            <div><i class="fa fa-bed"></i>2 Single Beds</div>
+                            <div><i class="fa fa-users"></i>6 Guests</div>
+                        </div>
+                        <div class="reviews">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-alt"></i>
+                            </div>
+                            <span>2 Reviews</span>
+                        </div>
+                        <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+           
+
+
+
+
+            <div class="col-12 col-md-6 col-lg-4 py-2">
+
+                <div class="card">
+                    <img src="images/rooms/r1.webp" alt="Luxury Suite">
+                    <div class="price-tag">From $90 / night</div>
+                    <div class="card-content">
+                        <h3>Luxury Suite</h3>
+                        <div class="features">
+                            <div><i class="fa fa-bed"></i>1 King Bed</div>
+                            <div><i class="fa fa-users"></i>4 Guests</div>
+                        </div>
+                        <div class="reviews">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>1 Review</span>
+                        </div>
+                        <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 py-2">
+                <div class="card">
+                    <img src="images/rooms/r2.webp" alt="Standard Deluxe">
+                    <div class="price-tag">From $75 / night</div>
+                    <div class="card-content">
+                        <h3>Standard Deluxe</h3>
+                        <div class="features">
+                            <div><i class="fa fa-bed"></i>2 Single Beds</div>
+                            <div><i class="fa fa-users"></i>6 Guests</div>
+                        </div>
+                        <div class="reviews">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-alt"></i>
+                            </div>
+                            <span>2 Reviews</span>
+                        </div>
+                        <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 py-2">
+                <div class="card">
+                    <img src="images/rooms/r3.webp" alt="Standard Deluxe" class="img-fluid text-center">
+                    <div class="price-tag">From $75 / night</div>
+                    <div class="card-content">
+                        <h3>The Penthouse</h3>
+                        <div class="features">
+                            <div><i class="fa fa-bed"></i>2 Single Beds</div>
+                            <div><i class="fa fa-users"></i>6 Guests</div>
+                        </div>
+                        <div class="reviews">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-alt"></i>
+                            </div>
+                            <span>2 Reviews</span>
+                        </div>
+                        <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-12 col-md-6 col-lg-4 py-2">
+
+                <div class="card">
+                    <img src="images/rooms/r4.webp" alt="Luxury Suite">
+                    <div class="price-tag">From $90 / night</div>
+                    <div class="card-content">
+                        <h3>Luxury Suite</h3>
+                        <div class="features">
+                            <div><i class="fa fa-bed"></i>1 King Bed</div>
+                            <div><i class="fa fa-users"></i>4 Guests</div>
+                        </div>
+                        <div class="reviews">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>1 Review</span>
+                        </div>
+                        <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 py-2">
+                <div class="card">
+                    <img src="images/rooms/r5.webp" alt="Standard Deluxe">
+                    <div class="price-tag">From $75 / night</div>
+                    <div class="card-content">
+                        <h3>Standard Deluxe</h3>
+                        <div class="features">
+                            <div><i class="fa fa-bed"></i>2 Single Beds</div>
+                            <div><i class="fa fa-users"></i>6 Guests</div>
+                        </div>
+                        <div class="reviews">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-alt"></i>
+                            </div>
+                            <span>2 Reviews</span>
+                        </div>
+                        <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 py-2">
+                <div class="card">
+                    <img src="images/rooms/r6.webp" alt="Standard Deluxe" class="img-fluid text-center">
+                    <div class="price-tag">From $75 / night</div>
+                    <div class="card-content">
+                        <h3>The Penthouse</h3>
+                        <div class="features">
+                            <div><i class="fa fa-bed"></i>2 Single Beds</div>
+                            <div><i class="fa fa-users"></i>6 Guests</div>
+                        </div>
+                        <div class="reviews">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-alt"></i>
+                            </div>
+                            <span>2 Reviews</span>
+                        </div>
+                        <a href="#">BOOK NOW <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+
+
+
+
     </div>
     <!-- <div class="read-more">
         <a>read more</a>
