@@ -108,6 +108,23 @@
 
 
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="index.php" data-toggle="collapse" data-target="#collapselunch" aria-expanded="true" aria-controls="collapselunch">
+                    <i class="fas fa-fw fa-file-pdf"></i>
+                    <span>lunch</span>
+                </a>
+                <div id="collapselunch" class="collapse" aria-labelledby="headinglunch" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Enter Menu</h6>
+                        <a class="collapse-item" href="add_lunch_item.php"><i class="fas fa-fw fa-upload"></i> Upload Lunch Items</a>
+                        <a class="collapse-item" href="all_lunch_items.php"><i class="fas fa-fw fa-list"></i> All Lunch Items</a>
+                    </div>
+                </div>
+            </li>
+
+
+
+
 
             <hr class="sidebar-divider d-none d-md-block">
 
