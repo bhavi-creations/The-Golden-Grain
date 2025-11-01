@@ -122,6 +122,40 @@
                 </div>
             </li>
 
+         
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="index.php" data-toggle="collapse" data-target="#collapsebreak" aria-expanded="true" aria-controls="collapsebreak">
+                    <i class="fas fa-fw fa-file-pdf"></i>
+                    <span>Break Fast</span>
+                </a>
+                <div id="collapsebreak" class="collapse" aria-labelledby="headingbreak" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Enter Menu</h6>
+                        <a class="collapse-item" href="add_breakfast_item.php"><i class="fas fa-fw fa-upload"></i> Upload Break Fast Items</a>
+                        <a class="collapse-item" href="all_breakfast_items.php"><i class="fas fa-fw fa-list"></i> All Break Fast Items</a>
+                    </div>
+                </div>
+            </li>
+
+
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="index.php" data-toggle="collapse" data-target="#collapsedinner" aria-expanded="true" aria-controls="collapsedinner">
+                    <i class="fas fa-fw fa-file-pdf"></i>
+                    <span>Dinner</span>
+                </a>
+                <div id="collapsedinner" class="collapse" aria-labelledby="headingdinner" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Enter Menu</h6>
+                        <a class="collapse-item" href="add_dinner_item.php"><i class="fas fa-fw fa-upload"></i> Upload Dinner Items</a>
+                        <a class="collapse-item" href="all_dinner_items.php"><i class="fas fa-fw fa-list"></i> All Dinner Items</a>
+                    </div>
+                </div>
+            </li>
+
 
 
 

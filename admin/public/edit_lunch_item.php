@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $status = $_POST['status'];
     $price = $_POST['price'];
 
-    $photo_filename = $item['photo']; // default to existing photo
+    $photo_filename = $item['photo']; // keep existing photo if not changed
 
     // Check if a new photo is uploaded
     if (isset($_FILES['photo']) && $_FILES['photo']['size'] > 0) {
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (move_uploaded_file($_FILES['photo']['tmp_name'], $target_file)) {
                 $photo_filename = $new_filename;
 
-                // Optional: delete old photo
+                // delete old photo
                 if (!empty($item['photo']) && file_exists($target_dir . $item['photo'])) {
                     unlink($target_dir . $item['photo']);
                 }
@@ -170,8 +170,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <div class="mb-3">
                                             <label for="status" class="form-label">Status</label>
                                             <select name="status" id="status" class="form-control" required>
-                                                <option value="Available" <?= $item['status'] == 'Available' ? 'selected' : '' ?>>Available</option>
-                                                <option value="Unavailable" <?= $item['status'] == 'Unavailable' ? 'selected' : '' ?>>Unavailable</option>
+                                                <option value="Active" <?= $item['status'] == 'Active' ? 'selected' : '' ?>>Active</option>
+                                                <option value="Inactive" <?= $item['status'] == 'Inactive' ? 'selected' : '' ?>>Inactive</option>
                                             </select>
                                         </div>
 
