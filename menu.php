@@ -1,17 +1,39 @@
-<?php include 'header.php' ?>
+<?php include 'header.php'; ?>
+<?php
+include './db_connect/db_connect.php';
 
-       
-<!--Breadcrubs start-->
+// Fetch all menu categories
+$categories = [];
+$cat_result = $conn->query("SELECT menu_category_id, menu_category FROM menu_category ORDER BY menu_category ASC");
+if ($cat_result && $cat_result->num_rows > 0) {
+    while ($row = $cat_result->fetch_assoc()) {
+        $categories[] = $row;
+    }
+}
+
+// Fetch all active menu items
+$items = [];
+$item_result = $conn->query("SELECT mi.*, mc.menu_category 
+                             FROM menu_items AS mi 
+                             LEFT JOIN menu_category AS mc ON mi.menu_category_id = mc.menu_category_id 
+                             WHERE mi.status='Active' 
+                             ORDER BY mi.item_id DESC");
+if ($item_result && $item_result->num_rows > 0) {
+    while ($row = $item_result->fetch_assoc()) {
+        $items[] = $row;
+    }
+}
+?>
+
+<!--Breadcrumbs start-->
 <div class="breadcrubs ptb-100">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcurbs-inner text-center">
-                    <h3 class="breadcrubs-title">
-                       Menu
-                    </h3>
+                    <h3 class="breadcrubs-title">Menu</h3>
                     <ul>
-                        <li><a href="index.php">home <span>//</span>  </a></li>
+                        <li><a href="index.php">home <span>//</span> </a></li>
                         <li>Menu</li>
                     </ul>
                 </div>
@@ -19,1015 +41,88 @@
         </div>
     </div>
 </div>
-<!--Breadcrubs end-->
-<!--elements start-->
+<!--Breadcrumbs end-->
+
+<!--Menu Items start-->
 <div class="elements ptb-100">
     <div class="container">
         <div class="row">
             <div class="food-item-tab home-page row">
-                <div class="col-lg-12">
-                    <div class="foode-item-box fix mb-60">
-                        <ul class="nav foode-item_nav" role="tablist">
-                            <li role="presentation"><a href="#tab1" aria-controls="tab1" data-bs-toggle="tab">All item</a></li>
-                            <li role="presentation"><a href="#tab2" aria-controls="tab2" data-bs-toggle="tab">breakfast</a></li>
-                            <li role="presentation"><a href="#tab3" aria-controls="tab3" data-bs-toggle="tab">lunch</a></li>
-                            <li role="presentation"><a class="active" aria-controls="tab4" href="#tab4" data-bs-toggle="tab">dinner</a></li>
-                            <li role="presentation"><a href="#tab5" aria-controls="tab5" data-bs-toggle="tab">drink</a></li>
-                            <li role="presentation"><a href="#tab6" aria-controls="tab6" data-bs-toggle="tab">party</a></li>
-                            <li role="presentation"><a href="#tab7" aria-controls="tab7" data-bs-toggle="tab">coffee</a></li>
+                <div class="col-lg-12 ">
+                    <div class="foode-item-box fix mb-60 ">
+                        <ul class="nav foode-item_nav d-flex flex-wrap justify-content-start mx-5 px-5" role="tablist" style="gap:10px;">
+                            <li role="presentation" style="flex: 0 0 32%;"><a class="active w-100 text-center py-2" href="#tab_all" data-bs-toggle="tab">All Items</a></li>
+                            <?php foreach ($categories as $cat): ?>
+                                <li role="presentation" style="flex: 0 0 32%;"><a class="w-100 text-center py-2" href="#tab_<?= $cat['menu_category_id'] ?>" data-bs-toggle="tab"><?= htmlspecialchars($cat['menu_category']) ?></a></li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-12">
-                    <div class="food-item-desc">
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane" id="tab1">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_left">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/01.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/2.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/3.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/4.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
+
+
+                <div class="tab-content w-100">
+                    <!-- All Items Tab -->
+                    <div role="tabpanel" class="tab-pane fade show active" id="tab_all">
+                        <div class="row">
+                            <?php foreach ($items as $item): ?>
+                                <div class="col-md-6 mb-30">
+                                    <div class="single-food-inner">
+                                        <div class="food-img">
+                                            <img src="admin/public/uploads/menu_items/<?= htmlspecialchars($item['photo']) ?>"
+                                                alt="<?= htmlspecialchars($item['item_name']) ?>"
+                                                style="width:100%; height:auto;">
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_right">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/5.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
+                                        <div class="single-food-item-desc">
+                                            <div class="single-food-item-title">
+                                                <h2><a href="#"><?= htmlspecialchars($item['item_name']) ?></a></h2>
+                                                <p><?= htmlspecialchars($item['veg_nonveg']) ?> / <?= htmlspecialchars($item['menu_category']) ?></p>
                                             </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/6.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/7.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/8.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
+                                            <div class="single-food-price">
+                                                <p>₹<?= number_format($item['price'], 2) ?></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="tab2">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_left">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/4.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/3.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/2.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/01.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_right">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/8.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/7.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/5.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/6.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="tab3">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_left">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/01.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/2.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/3.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/4.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_right">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/5.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/6.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/7.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/8.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane active" id="tab4">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_left">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/01.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/2.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/3.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/4.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_right">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/5.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/6.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/7.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/8.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="tab5">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_left">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/01.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/4.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/2.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/3.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_right">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/8.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/7.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/6.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/5.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="tab6">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_left">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/01.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/2.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/3.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/4.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_right">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/5.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/6.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/7.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/8.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="tab7">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_left">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/4.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/01.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/2.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/3.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="fooder-menu-description float_right">
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/8.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/5.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item mb-30">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/7.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                            <div class="single-food-item">
-                                                <div class="single-food-inner">
-                                                    <div class="food-img">
-                                                        <img src="images/food/6.png" alt="">
-                                                    </div>
-                                                    <div class="single-food-item-desc">
-                                                        <div class="single-food-item-title">
-                                                            <h2><a >Fried Potatoes With Garlic</a></h2>
-                                                            <p>Mushroom / Garlic / Veggies</p>
-                                                        </div>
-                                                        <div class="single-food-price">
-                                                            <p>₹100</p>
-                                                        </div>
-                                                    </div>	
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
+
+                    <!-- Category Tabs -->
+                    <?php foreach ($categories as $cat): ?>
+                        <div role="tabpanel" class="tab-pane fade" id="tab_<?= $cat['menu_category_id'] ?>">
+                            <div class="row">
+                                <?php foreach ($items as $item):
+                                    if ($item['menu_category_id'] != $cat['menu_category_id']) continue; ?>
+                                    <div class="col-md-6 mb-30">
+                                        <div class="single-food-inner">
+                                            <div class="food-img img-hover">
+                                                <img src="admin/public/uploads/menu_items/<?= htmlspecialchars($item['photo']) ?>"
+                                                    alt="<?= htmlspecialchars($item['item_name']) ?>"
+                                                    style="width:100%; height:auto; transition: transform 0.3s ease;">
+                                            </div>
+                                            <div class="single-food-item-desc">
+                                                <div class="single-food-item-title">
+                                                    <h2><a href="#"><?= htmlspecialchars($item['item_name']) ?></a></h2>
+                                                    <p><?= htmlspecialchars($item['veg_nonveg']) ?> / <?= htmlspecialchars($item['menu_category']) ?></p>
+                                                </div>
+                                                <div class="single-food-price">
+                                                    <p>₹<?= number_format($item['price'], 2) ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
+
+
             </div>
         </div>
     </div>
 </div>
-<!--elements end-->
-        <?php include 'footer.php' ?>
+<!--Menu Items end-->
+
+<?php include 'footer.php'; ?>

@@ -157,6 +157,21 @@
             </li>
 
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="index.php" data-toggle="collapse" data-target="#collapsemenu_items" aria-expanded="true" aria-controls="collapsemenu_items">
+                    <i class="fas fa-fw fa-file-pdf"></i>
+                    <span>Dinner</span>
+                </a>
+                <div id="collapsemenu_items" class="collapse" aria-labelledby="headingmenu_items" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Enter Menu</h6>
+                        <a class="collapse-item" href="add_menu_item.php"><i class="fas fa-fw fa-upload"></i> Upload Menu Items</a>
+                        <a class="collapse-item" href="all_menu_items.php"><i class="fas fa-fw fa-list"></i> All Menu Items</a>
+                    </div>
+                </div>
+            </li>
+
+
 
 
 
